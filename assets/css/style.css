@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.main {
+    padding: 15px 15px;
+}
+
+
+.main__product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.main__product-img {
+    width: 50%;
+    padding-top: 50%;
+    background: url('/assets/img/image1.jpg') top center / contain no-repeat;
+    flex-basis: 48%;
+}
+
+
+.main__product-info {
+    flex-basis: 48%;
+}
+
+
+.main__product-name {
+
+}
+
+
+.main__product-price {
+    margin: 20px 0px;
+}
+
+
+.main__product-desc {
+
+}
+
+/* main__cpurse */
+
+.main__course {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+}
+
+
+.main__course--width {
+    flex-basis: 18%;
+    margin: 0px 10px;
+}
+
+
+.main__course--cateory > a {
+    display: block;
+}
+
+
+.main__course--cateory > h2,
+.main__course--text > h2 {
+    margin-bottom: 20px;
+}
+
+
+/* main__feature */
+.main__feature {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    margin: 50px 0px;
+}
+
+
+.main__feature--text {
+    flex-basis: 30%;
+    padding: 15px;
+}
+
+
+.main__feature--text > h2 {
+    margin-bottom: 20px;
+}
+
+.main__feature--back1 {
+    background-color: rgb(51, 153, 172);
+}
+
+
+.main__feature--back2 {
+    background-color: rgb(204, 92, 41);
+}
+
+
+.main__feature--back3 {
+    background-color: rgb(119, 61, 153);
+}
+
+/* reponsive-tablet & mobile */
+@media only screen and (max-width:63.9375em) {
+    .main__product {
+        flex-direction: column-reverse;
+    }
+    .main__product-info {
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    .main__product-price {
+        text-align: left
+    }
+    .main__product-desc {
+        display: none;
+    }
+}
+
+
+/* reponsive-tablet */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+   /* main-product */
+    .main__product-img {
+        width: 85%;
+        padding-top: 85%;
+    }
+      /* main-course */
+    .main__course--width {
+        flex-basis: 22%;
+    }
+}
+
+
+/* responsive-mobile */
+@media only screen and (max-width: 46.1875em) {
+    .main__product-img {
+        width: 85%;
+        padding-top: 95%;
+    }
+    
+    /* main-course */
+    .main__course--cateory {
+        display: none;
+    }
+
+    .main__course--width {
+        flex-basis: 100%;
+    }
+    .main__course--text {
+        text-align: center;
+    }
+    .main__course--text > p{
+        text-align: justify;
+        margin: 20px 0px;
+    }
+
+    /* main-feature */
+    .main__feature {
+        flex-wrap: wrap;
+    }
+    .main__feature--text {
+        flex-basis: 100%; 
+        margin-bottom: 30px;
+    }
+    .main__feature--text > h2 {
+        text-align: center;
+    }
+    .main__feature--text > p {
+        text-align: justify;
+    }
+   
+}
